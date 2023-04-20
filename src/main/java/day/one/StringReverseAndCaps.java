@@ -1,11 +1,11 @@
-package DayOne;
+package day.one;
 
 public class StringReverseAndCaps {
     /*
         Reverse the string and then do the init caps
      */
     public static void main(String[] args) {
-        String str = "hello world";
+        String str = "hells world";
         StringBuilder strB = new StringBuilder();
         // Is to reverse the string and put it in string builder
         for (int i = str.length() - 1; i >= 0; i--) {
