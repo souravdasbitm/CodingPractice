@@ -1,7 +1,8 @@
-package liveram;
-
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class FindFrequencyOfWords {
 
@@ -23,13 +24,14 @@ public class FindFrequencyOfWords {
                 strMap.put(strArray[i], 1);
             }
         }
-        for(Map.Entry<String,Integer> map:strMap.entrySet()){
-            System.out.print(map.getKey() +" ------- "+map.getValue()+"\n");
+        for (Map.Entry<String, Integer> map : strMap.entrySet()) {
+            System.out.print(map.getKey() + " ------- " + map.getValue() + "\n");
         }
 
-//        Stream APIs
-
-
+//        Stream APIs  TC O(n) , SC O(n)
+        System.out.println(Arrays.asList(strArray)
+                .stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())));
 
     }
 }
