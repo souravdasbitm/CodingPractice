@@ -4,6 +4,8 @@ import java.util.HashSet;
 public class FindMissingNumbers {
 
     public static void main(String[] args){
+
+        //TC = O(n) and SC O(n)
         int[] intArray = {5,7,9,8,1,2,3};
         Arrays.sort(intArray);
 
